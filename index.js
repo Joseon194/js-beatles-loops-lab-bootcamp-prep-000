@@ -1,30 +1,22 @@
-'use strict';
+var recipes = new Object();
 
-function theBeatlesPlay(players, instruments) {
-    var allPlayers = [];
-    for (var i=0; i < players.length; i++) {
-        allPlayers.push(players[i] + " plays " + instruments[i]);
-    }
-    return allPlayers;
+function updateObjectWithKeyAndValue(object, key, value){
+  return Object.assign({},object,{[key]: value})
 }
 
-function johnLennonFacts() {
-    var facts = ["He was the last Beatle to learn to drive", "He was never a vegetarian", "He was a choir boy and boy scout", "He hated the sound of his own voice"];
-    var newFacts = [];
-    var i = 0;
-    while (i < facts.length) {
-        newFacts.push(facts[i] +"!!!");
-        i++;
-    }
-    return newFacts;
+function destructivelyUpdateObjectWithKeyAndValue(object, key, value){
+ object[key] = value
+return object
 }
 
-function iLoveTheBeatles(num) {
-    var love = [];
-    do {
-        love.push("I love the Beatles!");
-        num++;
-    } while (num < 15);
+function deleteFromObjectByKey(object, key){
+  var newObj =  Object.assign({},object)
+  delete newObj[key]
+  return newObj
 
-    return love;
+}
+
+function destructivelyDeleteFromObjectByKey(object, key){
+  delete object[key]
+  return object
 }
