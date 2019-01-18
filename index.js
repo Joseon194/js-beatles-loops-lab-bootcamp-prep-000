@@ -1,18 +1,26 @@
-var recipes = new Object ({})
+function theBeatlesPlay(musicians, instruments) {
+  var array = [];
+  for (var i = 0; i < musicians.length; i++) {
+  	array.push(musicians[i] + ' plays ' + instruments[i]);
+  }
+  return array;
+}
 
-var obj = { prop: 1 }
-function updateObjectWithKeyAndValue(object, key, value) {
-  return Object.assign({},obj,{[key]:value})
+function johnLennonFacts(facts) {
+  var results = [];
+  var count = 0;
+  while (count < facts.length) {
+    results.push(facts[count] + "!!!");
+    count++;
+  }
+  return results;
 }
-function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
-  object[key] = value
-  return object
-}
-function deleteFromObjectByKey(object, key) {
-  delete object.key;
-  return obj
-}
-function destructivelyDeleteFromObjectByKey(object, key) {
-  delete object.key
-  return object
+
+function iLoveTheBeatles(num) {
+  var array = [];
+  do {
+    array.push("I love the Beatles!")
+    num++;
+  } while (num < 15);
+  return array;
 }
